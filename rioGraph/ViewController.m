@@ -78,10 +78,6 @@
     [NSThread exit];
 }
 
-- (IBAction)pinch:(id)sender{
-    
-}
-
 
 - (IBAction)button:(id)sender {
 

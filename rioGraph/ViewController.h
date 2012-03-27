@@ -10,7 +10,7 @@
 #import "waveView.h"
 #import "Audio.h"
 
-@interface ViewController : UIViewController<UIGestureRecognizerDelegate>
+@interface ViewController : UIViewController
     
 
 
@@ -19,7 +19,6 @@
 - (IBAction)button:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *button;
 @property bool recording;
-- (IBAction)pinch:(id)sender;
 
 
 @end

@@ -25,9 +25,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="BbF-9K-C1i" appends="YES" id="sEf-Sd-Jwi"/>
-                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OZC-I0-Dvm">
                                 <rect key="frame" x="124" y="403" width="72" height="37"/>
@@ -53,12 +50,6 @@
                         <outlet property="waveformView" destination="00t-k5-qLY" id="2br-81-npc"/>
                     </connections>
                 </viewController>
-                <pinchGestureRecognizer id="BbF-9K-C1i">
-                    <connections>
-                        <action selector="pinch:" destination="2" id="OsB-XP-vii"/>
-                        <outlet property="delegate" destination="2" id="nBY-cG-g3R"/>
-                    </connections>
-                </pinchGestureRecognizer>
             </objects>
         </scene>
     </scenes>

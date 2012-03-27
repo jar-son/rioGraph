@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  waveView.h
 //  rioGraph
 //
 //  Created by Jason Clary on 3/26/12.
@@ -7,12 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Audio.h"
 #import "AudioBufferCache.h"
 
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface waveView : UIView
 
 @end
+

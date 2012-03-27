@@ -9,6 +9,11 @@
 #import "ViewController.h"
 
 @implementation ViewController
+@synthesize button;
+@synthesize waveformView;
+@synthesize label;
+@synthesize recording;
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -26,6 +31,9 @@
 
 - (void)viewDidUnload
 {
+    [self setLabel:nil];
+    [self setWaveformView:nil];
+    [self setButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -57,4 +65,58 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+-(void)updateView
+{
+    [waveformView setNeedsDisplay];
+}
+
+-(void)doWork{
+    while(recording){
+        [NSThread sleepForTimeInterval:.1];
+        [self performSelectorOnMainThread:@selector(updateView) withObject:nil waitUntilDone:NO];
+    }
+    [NSThread exit];
+}
+
+- (IBAction)pinch:(id)sender{
+    
+}
+
+
+- (IBAction)button:(id)sender {
+
+    if(sender == button){
+        if([button.titleLabel.text isEqualToString:@"GO"]){
+            [label setText:@"Recording"];
+            [button setTitle:@"Stop" forState:UIControlStateNormal];
+            [AudioBufferCache getABCache].width = waveformView.bounds.size.width;
+            audio.zoomLevel = 128;
+            [audio start];
+            recording = YES;
+            [NSThread detachNewThreadSelector:@selector(doWork) toTarget:self withObject:nil];
+            
+        }else{
+            [button setTitle:@"GO" forState:UIControlStateNormal];           
+            [audio stop];
+            [label setText:@"Stopped"];
+            recording = NO;
+        }
+    }
+    
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+

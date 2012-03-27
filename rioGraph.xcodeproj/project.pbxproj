@@ -15,6 +15,11 @@
 		323BEEAE1520D8E9000F7927 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 323BEEAD1520D8E9000F7927 /* AppDelegate.m */; };
 		323BEEB11520D8E9000F7927 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 323BEEAF1520D8E9000F7927 /* MainStoryboard.storyboard */; };
 		323BEEB41520D8E9000F7927 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 323BEEB31520D8E9000F7927 /* ViewController.m */; };
+		323BEEBC1520D9A4000F7927 /* waveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 323BEEBB1520D9A4000F7927 /* waveView.m */; };
+		323BEEBF1520DF18000F7927 /* Audio.m in Sources */ = {isa = PBXBuildFile; fileRef = 323BEEBE1520DF18000F7927 /* Audio.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		323BEEC6152103A1000F7927 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323BEEC4152103A1000F7927 /* AudioToolbox.framework */; };
+		323BEECB152104AD000F7927 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323BEECA152104AD000F7927 /* CoreAudio.framework */; };
+		323BEED115210B5E000F7927 /* AudioBufferCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 323BEED015210B5E000F7927 /* AudioBufferCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +27,24 @@
 		323BEE9D1520D8E9000F7927 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		323BEE9F1520D8E9000F7927 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		323BEEA11520D8E9000F7927 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		323BEEA51520D8E9000F7927 /* rioGraph-Info.plist */ = {isa = PBXFileReference; path = "rioGraph-Info.plist"; sourceTree = "<group>"; };
+		323BEEA51520D8E9000F7927 /* rioGraph-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "rioGraph-Info.plist"; sourceTree = "<group>"; };
 		323BEEA71520D8E9000F7927 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		323BEEA91520D8E9000F7927 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		323BEEAB1520D8E9000F7927 /* rioGraph-Prefix.pch */ = {isa = PBXFileReference; path = "rioGraph-Prefix.pch"; sourceTree = "<group>"; };
-		323BEEAC1520D8E9000F7927 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		323BEEAB1520D8E9000F7927 /* rioGraph-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rioGraph-Prefix.pch"; sourceTree = "<group>"; };
+		323BEEAC1520D8E9000F7927 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		323BEEAD1520D8E9000F7927 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		323BEEB01520D8E9000F7927 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		323BEEB21520D8E9000F7927 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		323BEEB21520D8E9000F7927 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		323BEEB31520D8E9000F7927 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		323BEEBA1520D9A4000F7927 /* waveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = waveView.h; sourceTree = "<group>"; };
+		323BEEBB1520D9A4000F7927 /* waveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = waveView.m; sourceTree = "<group>"; };
+		323BEEBD1520DF18000F7927 /* Audio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Audio.h; sourceTree = "<group>"; };
+		323BEEBE1520DF18000F7927 /* Audio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Audio.m; sourceTree = "<group>"; };
+		323BEEC4152103A1000F7927 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		323BEEC815210430000F7927 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		323BEECA152104AD000F7927 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		323BEECF15210B5E000F7927 /* AudioBufferCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioBufferCache.h; path = ../AudioBufferCache.h; sourceTree = "<group>"; };
+		323BEED015210B5E000F7927 /* AudioBufferCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioBufferCache.m; path = ../AudioBufferCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				323BEECB152104AD000F7927 /* CoreAudio.framework in Frameworks */,
+				323BEEC6152103A1000F7927 /* AudioToolbox.framework in Frameworks */,
 				323BEE9E1520D8E9000F7927 /* UIKit.framework in Frameworks */,
 				323BEEA01520D8E9000F7927 /* Foundation.framework in Frameworks */,
 				323BEEA21520D8E9000F7927 /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +83,9 @@
 		323BEE9C1520D8E9000F7927 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				323BEECA152104AD000F7927 /* CoreAudio.framework */,
+				323BEEC815210430000F7927 /* AudioUnit.framework */,
+				323BEEC4152103A1000F7927 /* AudioToolbox.framework */,
 				323BEE9D1520D8E9000F7927 /* UIKit.framework */,
 				323BEE9F1520D8E9000F7927 /* Foundation.framework */,
 				323BEEA11520D8E9000F7927 /* CoreGraphics.framework */,
@@ -77,11 +96,16 @@
 		323BEEA31520D8E9000F7927 /* rioGraph */ = {
 			isa = PBXGroup;
 			children = (
+				323BEED215210B69000F7927 /* Classes */,
 				323BEEAC1520D8E9000F7927 /* AppDelegate.h */,
 				323BEEAD1520D8E9000F7927 /* AppDelegate.m */,
 				323BEEAF1520D8E9000F7927 /* MainStoryboard.storyboard */,
+				323BEEBA1520D9A4000F7927 /* waveView.h */,
+				323BEEBB1520D9A4000F7927 /* waveView.m */,
 				323BEEB21520D8E9000F7927 /* ViewController.h */,
 				323BEEB31520D8E9000F7927 /* ViewController.m */,
+				323BEEBD1520DF18000F7927 /* Audio.h */,
+				323BEEBE1520DF18000F7927 /* Audio.m */,
 				323BEEA41520D8E9000F7927 /* Supporting Files */,
 			);
 			path = rioGraph;
@@ -96,6 +120,15 @@
 				323BEEAB1520D8E9000F7927 /* rioGraph-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		323BEED215210B69000F7927 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				323BEECF15210B5E000F7927 /* AudioBufferCache.h */,
+				323BEED015210B5E000F7927 /* AudioBufferCache.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +196,9 @@
 				323BEEAA1520D8E9000F7927 /* main.m in Sources */,
 				323BEEAE1520D8E9000F7927 /* AppDelegate.m in Sources */,
 				323BEEB41520D8E9000F7927 /* ViewController.m in Sources */,
+				323BEEBC1520D9A4000F7927 /* waveView.m in Sources */,
+				323BEEBF1520DF18000F7927 /* Audio.m in Sources */,
+				323BEED115210B5E000F7927 /* AudioBufferCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +310,7 @@
 				323BEEB91520D8E9000F7927 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

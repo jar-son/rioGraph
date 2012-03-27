@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "waveView.h"
+#import "Audio.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIGestureRecognizerDelegate>
+    
+
+
+@property (weak, nonatomic) IBOutlet waveView *waveformView;
+@property (weak, nonatomic) IBOutlet UILabel *label;
+- (IBAction)button:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *button;
+@property bool recording;
+- (IBAction)pinch:(id)sender;
+
 
 @end

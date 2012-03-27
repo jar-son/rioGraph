@@ -15,6 +15,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    audio = [[Audio alloc] init];
     return YES;
 }
 							
@@ -55,6 +56,10 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+}
+
+-(void)dealloc{
+    audio = nil;
 }
 
 @end

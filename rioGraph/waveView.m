@@ -18,7 +18,6 @@ CGRect line;
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        line = CGRectMake(0, self.bounds.size.height/2, self.bounds.size.width, 1.);
     }
     return self;
 }
@@ -29,7 +28,7 @@ CGRect line;
     for (node* tmp = [abCache first]; tmp != [abCache last] && i < self.bounds.size.width;tmp=tmp->next, i++)
     {
         int length = abs(tmp->max - tmp->min);
-        CGContextAddRect(context,CGRectMake(i, self.bounds.size.height / 2 - tmp->max / 64  , 1., length/64));
+        CGContextAddRect(context,CGRectMake(i, self.bounds.size.height / 2 - tmp->max / 64  , .5, length/64));
     }
 }
 
@@ -45,7 +44,10 @@ CGRect line;
     
     [self getData:context];
     CGContextStrokePath(context);
-    
+ 
+    CGContextAddRect(context, CGRectMake(0, self.bounds.size.height/2, self.bounds.size.width, .1));
+      CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
+    CGContextStrokePath(context);
 }
 
 

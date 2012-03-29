@@ -28,7 +28,6 @@
 }
 -(void)start;
 -(void)stop;
--(void)tearDown;
 @property int zoomLevel;
 @property (readonly) AudioComponentInstance audioUnit;
 @property (readonly) AudioBuffer tempBuffer;
@@ -37,5 +36,6 @@
 @end
 
 extern Audio *audio;
+void checkStatus(int status, char* string);
 
 

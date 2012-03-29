@@ -19,7 +19,7 @@
 		323BEEBF1520DF18000F7927 /* Audio.m in Sources */ = {isa = PBXBuildFile; fileRef = 323BEEBE1520DF18000F7927 /* Audio.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		323BEEC6152103A1000F7927 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323BEEC4152103A1000F7927 /* AudioToolbox.framework */; };
 		323BEECB152104AD000F7927 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323BEECA152104AD000F7927 /* CoreAudio.framework */; };
-		323BEED115210B5E000F7927 /* AudioBufferCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 323BEED015210B5E000F7927 /* AudioBufferCache.m */; };
+		329AC0031523E08F00202CB1 /* AudioBufferCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 329AC0021523E08F00202CB1 /* AudioBufferCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,8 +43,8 @@
 		323BEEC4152103A1000F7927 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		323BEEC815210430000F7927 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		323BEECA152104AD000F7927 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
-		323BEECF15210B5E000F7927 /* AudioBufferCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioBufferCache.h; path = ../AudioBufferCache.h; sourceTree = "<group>"; };
-		323BEED015210B5E000F7927 /* AudioBufferCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioBufferCache.m; path = ../AudioBufferCache.m; sourceTree = "<group>"; };
+		329AC0011523E08F00202CB1 /* AudioBufferCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioBufferCache.h; sourceTree = "<group>"; };
+		329AC0021523E08F00202CB1 /* AudioBufferCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioBufferCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +125,8 @@
 		323BEED215210B69000F7927 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				323BEECF15210B5E000F7927 /* AudioBufferCache.h */,
-				323BEED015210B5E000F7927 /* AudioBufferCache.m */,
+				329AC0011523E08F00202CB1 /* AudioBufferCache.h */,
+				329AC0021523E08F00202CB1 /* AudioBufferCache.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -198,7 +198,7 @@
 				323BEEB41520D8E9000F7927 /* ViewController.m in Sources */,
 				323BEEBC1520D9A4000F7927 /* waveView.m in Sources */,
 				323BEEBF1520DF18000F7927 /* Audio.m in Sources */,
-				323BEED115210B5E000F7927 /* AudioBufferCache.m in Sources */,
+				329AC0031523E08F00202CB1 /* AudioBufferCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

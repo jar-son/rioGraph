@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "AudioBufferCache.h"
 
-@interface waveView : UIView
+@interface waveView : UIView{
+}
 
 @end
 

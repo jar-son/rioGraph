@@ -23,17 +23,13 @@ static AudioBufferCache *abCache;
 
 -(id)init{
     if(self = [super init]){
-        if(!head){
-            head = (node *)malloc(sizeof(node));
-            last = (node *)malloc(sizeof(node));
-            head->next = last;
-        }
+
     }
     return self;
 }
 
 -(node *)first{
-    return head->next;
+    return head;
 }
 
 -(node *)next :(node *)current{
@@ -41,33 +37,40 @@ static AudioBufferCache *abCache;
 }
 
 -(node *)last{
-    return last;
+    return tail;
 }
 
 -(void)add:(int32_t)max :(int32_t)min{
-
-    if(count == width)
-        [self removeLast];
     
-    node *curr = (node *)malloc(sizeof(node));
-    curr->max = max;
-    curr->min = min;
-
-    curr->next = head->next;
-    head->next = curr;
+    node *c = (node *)malloc(sizeof(node));
+    c->max = max;
+    c->min = min;
+    
+    if(count == width)
+        [self remove];
+    
+    if(!head && !tail){
+        head = tail = c;
+    } else {
+        tail->next = c;
+        tail = c;
+    }
+    
     count++;
 }
 
 
--(void)removeLast{
-    node *tmp = head;
-    node *prev = head;
-    while(tmp->next != last){
-        prev = tmp;
-        tmp = tmp->next;
-    }
-    free(tmp);
-    prev->next = last;
+-(void)remove{
+    
+    if(!head && !tail) return;
+
+    node *h = head;
+    node *c = h->next;
+    
+    free(h);
+    head = c;
+    if(!head) tail = head;
+    
     count--;
 }
 

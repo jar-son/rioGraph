@@ -15,7 +15,6 @@ Audio* audio;
 void checkStatus(int status, char* string){
 	if (status) {
 		printf("Status not 0! %d\nAt: %s\n", status,string);
-        //		exit(1);
 	}
 }
 
@@ -133,7 +132,7 @@ static OSStatus recordingCallback(void *inRefCon,
     // Disable buffer allocation for the recorder (optional - do this if we want to pass in our own)
 	flag = 0;
 	status = AudioUnitSetProperty(audioUnit,kAudioUnitProperty_ShouldAllocateBuffer,kAudioUnitScope_Output, kInputBus,&flag, sizeof(flag));
-    
+    checkStatus(status, "At set property should allocate buffer");
     // Allocate our own buffers (1 channel, 16 bits per sample, thus 16 bits per frame, thus 2 bytes per frame).
 	// Practice learns the buffers used contain 512 frames, if this changes it will be fixed in processAudio.
 	tempBuffer.mNumberChannels = 1;
@@ -147,7 +146,6 @@ static OSStatus recordingCallback(void *inRefCon,
 
 
 -(void)start{
-    NSLog(@"Starting");
     OSStatus status = AudioOutputUnitStart(audioUnit);
     checkStatus(status,"At starting");
 }
@@ -157,9 +155,6 @@ static OSStatus recordingCallback(void *inRefCon,
     checkStatus(status,"At stopping");
 }
 
--(void)tearDown{
-    AudioUnitUninitialize(audioUnit);
-}
 
 -(void)processAudio:(AudioBufferList *)bufferList{
     AudioBuffer sourceBuffer = bufferList->mBuffers[0];
@@ -189,8 +184,6 @@ static OSStatus recordingCallback(void *inRefCon,
         }
     }
     [pool drain];
-    //NSLog(@"min: %d, max: %d",min,max);
-
 }
 
 

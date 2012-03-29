@@ -10,25 +10,31 @@
 #import "AudioBufferCache.h"
 
 @implementation waveView
-
 CGRect line;
+
+int b;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+         b = self.bounds.size.height * .58;
     }
     return self;
 }
 
 -(void)getData:(CGContextRef) context{
+    
+    if(!b){
+        b = self.bounds.size.height * .58;
+    }
+     
     AudioBufferCache *abCache = [AudioBufferCache getABCache];
     int i = 0;
     for (node* tmp = [abCache first]; tmp != [abCache last] && i < self.bounds.size.width;tmp=tmp->next, i++)
     {
         int length = abs(tmp->max - tmp->min);
-        CGContextAddRect(context,CGRectMake(i, self.bounds.size.height / 2 - tmp->max / 64  , .5, length/64));
+        CGContextAddRect(context,CGRectMake(i, self.bounds.size.height / 2 - tmp->max/b   , .5, length/b));
     }
 }
 

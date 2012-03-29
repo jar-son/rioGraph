@@ -18,13 +18,13 @@ typedef struct __node{
     @private
     int count;
     node *head;
-    node *last;
+    node *tail;
 }
 
 @property int width;
 +(AudioBufferCache *)getABCache;
 -(void)add:(int32_t)max :(int32_t)min;
--(void)removeLast;
+-(void)remove;
 -(node *)first;
 -(node *)next :(node *)current;
 -(node *)last;
